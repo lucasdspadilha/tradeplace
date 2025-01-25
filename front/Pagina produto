@@ -1,0 +1,224 @@
+<template>
+  <div class="product-page">
+    <header class="header">
+      <div class="logo">Trade Place</div>
+      <input type="text" class="search-bar" placeholder="Pesquise o que precisa..." />
+      <button class="search-button">Buscar</button>
+      <div class="cart-login">
+        <a href="/cart" class="cart">Carrinho</a>
+        <a href="/login" class="login">Login/Criar</a>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="product-info">
+        <img 
+          class="product-image" 
+          src="https://via.placeholder.com/300" 
+          alt="WAP Aspirador de Pó Robô W400"
+        />
+        <div class="details">
+          <h1 class="product-title">WAP Aspirador de Pó Robô W400</h1>
+          <div class="rating">
+            <span>3.5</span>
+            <span class="stars">⭐⭐⭐✰✰</span>
+          </div>
+          <p class="description">
+            O aspirador de pó robô W400 da WAP é a solução perfeita para quem busca modernidade, praticidade e eficiência na limpeza doméstica. Equipado com sensores de última geração, ele detecta obstáculos e evita quedas.
+          </p>
+        </div>
+      </section>
+
+      <section class="purchase-section">
+        <div class="price-box">
+          <p class="price">Novo por: <strong>R$ 1.099,99</strong></p>
+          <div class="shipping">
+            <label for="zip">Calcule o frete:</label>
+            <input id="zip" type="text" placeholder="00000-000" />
+            <button>Calcular</button>
+          </div>
+          <div class="actions">
+            <input type="number" value="1" min="1" class="quantity" />
+            <button class="buy-now">Comprar agora</button>
+            <button class="add-to-cart">Adicionar ao carrinho</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews">
+        <h2>Avaliações</h2>
+        <div class="review">
+          <p><strong>João Marcos</strong> - 5.0 ⭐⭐⭐⭐⭐</p>
+          <p>"É um excelente produto! As funções são incríveis e bem otimizadas, os sensores fazem um ótimo trabalho evitando obstáculos..."</p>
+        </div>
+        <div class="review">
+          <p><strong>Gertrudes Souza</strong> - 2.0 ⭐⭐✰✰✰</p>
+          <p>"Não funcionou tão bem para os cantos. A bateria também dura menos do que o esperado."</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2025 - TradePlace | SPP - Piracicaba</p>
+    </footer>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'ProductPage',
+};
+</script>
+
+<style scoped>
+.product-page {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #004d80;
+  color: white;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.search-bar {
+  flex-grow: 1;
+  margin: 0 10px;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.search-button {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cart-login a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.main-content {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 20px;
+}
+
+.product-info {
+  flex: 2;
+  display: flex;
+  gap: 20px;
+}
+
+.product-image {
+  max-width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.stars {
+  margin-left: 10px;
+  color: gold;
+}
+
+.description {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+.purchase-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.price {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.shipping label {
+  margin-right: 5px;
+}
+
+.actions {
+  margin-top: 10px;
+}
+
+.buy-now, .add-to-cart {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-to-cart {
+  background-color: #007bff;
+}
+
+.reviews {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.review {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.footer {
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  background-color: #004d80;
+  color: white;
+  width: 100%;
+}
+</style>
